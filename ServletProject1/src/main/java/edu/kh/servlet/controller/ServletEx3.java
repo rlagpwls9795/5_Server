@@ -77,24 +77,6 @@ public class ServletEx3 extends HttpServlet{
 		out.println("</body>");
 		out.println("</html>");
 		
-		
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
