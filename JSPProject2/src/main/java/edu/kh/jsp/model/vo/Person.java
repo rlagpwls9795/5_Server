@@ -12,10 +12,19 @@ public class Person {
 		// TODO Auto-generated constructor stub
 	}
 	
+	//매개변수 생성자
+	public Person(String name, int age, String address) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.address = address;
+	}
+
 	//getter/setter
 	public String getName() {
 		return name;
 	}
+
 
 	public void setName(String name) {
 		this.name=name;
