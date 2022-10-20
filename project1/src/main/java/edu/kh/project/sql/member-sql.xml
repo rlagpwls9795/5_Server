@@ -16,4 +16,10 @@
 	?, DEFAULT, DEFAULT, DEFAULT, DEFAULT)	
    </entry>
    
+   <entry key="updateMember">
+   	UPDATE "MEMBER" SET
+	MEMBER_NICKNAME=?, MEMBER_TEL=?, MEMBER_ADDRESS =?
+	WHERE MEMBER_NO = ?
+   </entry>
+   
 </properties>

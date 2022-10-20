@@ -25,7 +25,7 @@ public class signUpServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		//데이터 문자 인코딩
-		req.setCharacterEncoding("UTF-8");
+		//req.setCharacterEncoding("UTF-8");
 		
 		Member member = new Member();
 		

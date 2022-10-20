@@ -74,7 +74,7 @@ public class MemberDAO {
 	}
 
 	public int signUp(Member member, Connection conn) throws Exception{
-		int result = -1;
+		int result = 0;
 		
 		try {
 			String sql = prop.getProperty("signUp");
@@ -84,6 +84,26 @@ public class MemberDAO {
 			pstmt.setString(3, member.getMemberNickname());
 			pstmt.setString(4, member.getMemberTel());
 			pstmt.setString(5, member.getMemberAddress());
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			close(rs);
+		}
+		
+		return result;
+	}
+
+	public int updateMember(Member member, Connection conn) throws Exception{
+		int result = 0;
+		
+		try {
+			String sql = prop.getProperty("updateMember");
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, member.getMemberNickname());
+			pstmt.setString(2, member.getMemberTel());
+			pstmt.setString(3, member.getMemberAddress());
+			pstmt.setInt(4, member.getMemberNo());
 			
 			result = pstmt.executeUpdate();
 			
