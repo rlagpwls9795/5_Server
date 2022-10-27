@@ -282,6 +282,6 @@ FROM "MEMBER"
 WHERE MEMBER_DEL_FL = 'N'
 AND MEMBER_EMAIL = 'user02@kh.or.kr';
 
-
+COMMIT;
 
 
