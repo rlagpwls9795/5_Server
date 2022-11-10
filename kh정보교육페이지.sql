@@ -231,3 +231,24 @@ SELECT * FROM "MEMBER";
 COMMIT;
 
 
+-- 중복 검사
+-- 탈퇴하지 않은 회원 중 이메일이 같은 사람의 수 조회
+-- 0 : 중복 X / 1 : 중복 O 
+SELECT COUNT(*) FROM "MEMBER"
+WHERE MEMBER_EMAIL='user01@kh.or.kr'
+AND MEMBER_DEL_FL = 'N';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
